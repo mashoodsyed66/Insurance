@@ -29,10 +29,8 @@ In the boxplots below, you'll notice some dots that are far away from the main b
 ![output_8_0](https://github.com/mashoodsyed66/Insurance/assets/65015378/c73d30c3-da14-40b0-88fc-b99c2df09ca5)
 
 
-Sure, here's how you can include the provided code and the explanation in your README:
 
-```markdown
-## Handling Outliers
+## Investigating Outliers
 
 To identify outliers in the `charges` column, we calculated the Interquartile Range (IQR) and used it to determine the upper and lower bounds. Any data points falling outside these bounds are considered outliers.
 
@@ -62,13 +60,16 @@ Upon further investigation of these outliers, we found that out of the 139 cases
 |    55 | female |  26.8 |          1 | no       | southwest | 35160.1   |
 |    61 | female |  33.33|          4 | no       | southeast | 36580.3   |
 |    59 | female |  34.8 |          2 | no       | southwest | 36910.6   |
-```
 
 This table highlights that while outliers in medical charges exist across various demographics, the majority of outliers with substantially higher charges are associated with smokers.
-```
+<br> </br>
 
-![output_11_0](https://github.com/mashoodsyed66/Insurance/assets/65015378/b396dd61-2a6d-4312-bd2d-088787d883f5)
-![output_12_1](https://github.com/mashoodsyed66/Insurance/assets/65015378/18c63fe6-c1fd-4cae-a2d4-4dcc8386bb85)
+Also from below visual we can see that the majority **Charges** that are very high are smokers and also have **BMI** greater than 30 which means they are obese.
+
+![download](https://github.com/mashoodsyed66/Insurance/assets/65015378/429ce23c-7745-41cc-891e-3a1b6ad39028)
+
+Next, we performed encoding transformations to prepare our categorical data for machine learning analysis. For the 'sex' and 'smoker' columns, we converted categorical values ('male'/'female', 'yes'/'no') into binary representations (1/0), facilitating algorithmic understanding. Additionally, we utilized one-hot encoding on the 'region' column, creating separate binary columns for each region category. This ensures our model can effectively interpret and utilize categorical data. Below is the code implementing these transformations:
+
 ![output_25_0](https://github.com/mashoodsyed66/Insurance/assets/65015378/113d015a-eff9-434f-9d0b-77ea7ff3ac43)
 ![output_26_0](https://github.com/mashoodsyed66/Insurance/assets/65015378/ec070a65-cde9-4b2a-9f4e-80822dfece65)
 ![output_29_0](https://github.com/mashoodsyed66/Insurance/assets/65015378/5c9282a3-2bfc-40e6-b718-4f10f2e6fc42)
